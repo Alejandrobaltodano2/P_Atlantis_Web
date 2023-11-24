@@ -1,0 +1,645 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+  @import url('menu.css');
+
+
+  /*--------------------------------------------------------------
+    # General
+  --------------------------------------------------------------*/
+  * {
+      margin: 0px;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      scroll-behavior: smooth;
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .menu-icono {
+      width: 100px;
+      position: absolute;
+      top: 0;
+      left: 5px;
+      float: left;
+  }
+
+  .header {
+      width: 100%;
+      height: 91px;
+      background-color: rgba(37, 33, 33, 0.836);
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+  }
+
+  .container {
+      max-width: 98%;
+      margin: auto;
+  }
+
+  h2 {
+      font-size: 60px;
+      line-height: 100%;
+      color: #f3f3f3;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+      margin-bottom: 3%;
+      letter-spacing: 3px;
+  }
+
+  p {
+      font-size: 18px;
+      color: #d6cabb;
+      margin: 25px 0;
+  }
+
+  .textoenmovimiento {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 1s, transform 1s;
+  }
+
+
+  section {
+      width: 100%;
+  }
+
+  .btn-1 {
+      background-color: #4e443c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      margin: 0 auto;
+      /* Centra horizontalmente */
+      display: block;
+      /* Asegura que ocupe todo el ancho disponible */
+      width: fit-content;
+      /* Ajusta el ancho al contenido */
+  }
+
+
+  /*--------------------------------------------------------------
+    # Inicio
+  --------------------------------------------------------------*/
+  #inicio {
+      margin-top: 0;
+      background-image: url(../img/carnitas.jpg);
+      background-position: center top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      height: 630px;
+      position: relative;
+      text-align: center;
+      overflow-x: hidden;
+
+      @media (max-width: 767px) {
+          margin-top: 0;
+      }
+  }
+
+
+  #inicio .container {
+      position: absolute;
+      top: 20%;
+
+  }
+
+  #inicio h1 {
+      font-size: 110px;
+      letter-spacing: 0.1em;
+      font-family: 'Bebas Neue', cursive;
+      color: #fff6f7;
+  }
+
+  #inicio span {
+      font-size: 55px;
+      letter-spacing: 10px;
+      font-family: 'Bebas Neue', cursive;
+      color: #f38e3b;
+  }
+
+  #inicio h3 {
+      font-size: 20px;
+      letter-spacing: 8px;
+      font-family: 'Bebas Neue', cursive;
+      color: #f38e3b;
+  }
+
+  #inicio p {
+      color: #ffffff;
+      margin: 40px;
+  }
+
+  #inicio ul {
+      display: flex;
+      padding: 0;
+      width: 400%;
+      animation: slide 20s infinite alternate ease-in-out;
+  }
+
+  #inicio li {
+      width: 100%;
+      list-style: none;
+      position: relative;
+  }
+
+  @keyframes slide {
+      0% {
+          margin-left: 0;
+      }
+
+      20% {
+          margin-left: 0;
+      }
+
+      25% {
+          margin-left: -100%;
+      }
+
+      45% {
+          margin-left: -100%;
+      }
+
+      50% {
+          margin-left: -200%;
+      }
+
+      70% {
+          margin-left: -200%;
+      }
+
+      75% {
+          margin-left: -300%;
+      }
+
+      100% {
+          margin-left: -300%;
+      }
+  }
+
+
+
+
+  /*--------------------------------------------------------------
+    # Bienvenidos
+  --------------------------------------------------------------*/
+  #bienvenido {
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: 767px) {
+          flex-direction: column;
+      }
+  }
+
+  .welcome-1 {
+      background-image: url(../img/atlantis.gif);
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+
+
+      @media (max-width: 767px) {
+          flex: 2;
+          background-position: top;
+      }
+  }
+
+
+  .welcome-2 {
+      flex: 1;
+      padding: 300px 50px 0px 50px;
+      background-color: #000000e1;
+
+
+      @media (max-width: 767px) {
+          flex: 2;
+          padding: 50px 50px 50px 50px;
+      }
+  }
+
+
+
+  /*--------------------------------------------------------------
+    # Nosotros
+  --------------------------------------------------------------*/
+  #nosotros {
+
+      background-color: #020202;
+      text-align: center;
+      padding: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      height: 100vh;
+  }
+
+  #nosotros .container {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      right: 0;
+      height: 100%;
+  }
+
+  #nosotros h2 {
+      margin-top: 0px;
+  }
+
+  #nosotros hr {
+      border: 1px solid rgb(223, 85, 6);
+      width: 80px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+  }
+
+  #nosotros p {
+      color: #ffffff;
+      margin: 40px;
+  }
+
+  #nosotros img {
+      max-width: 40%;
+      height: auto;
+      transition: .5s, color .10s;
+      -webkit-transition: .5s, color .10s;
+      -moz-transition: .5s, color .10s;
+
+      @media (max-width: 767px) {
+          max-width: 70%;
+      }
+  }
+
+  #nosotros img:hover {
+      transform: scale3d(1.5, 1.5, 0.3);
+      -webkit-transform: scale3d(1.5, 1.5, 0.1);
+      -moz-transform: scale3d(1.5, 1.5, 0.3);
+  }
+
+
+  /*--------------------------------------------------------------
+    # Servicios
+  --------------------------------------------------------------*/
+  #servicios {
+      background-color: #020202;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background-image: url(../static/img/fuego.jpg);
+      background-position: center top;
+      background-repeat: no-repeat;
+
+      @media (min-width: 768px) {
+          height: 100vh;
+      }
+  }
+
+  #servicios h2 {
+      margin-top: 50px;
+  }
+
+  #servicios hr {
+      border: 1px solid rgb(223, 85, 6);
+      width: 80px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+  }
+
+  #servicios p {
+      color: #ffffff;
+      margin: 40px;
+  }
+
+
+  #servicios .services-group {
+      justify-content: space-between;
+      display: flex;
+      margin: 0 30px;
+
+      @media (max-width: 767px) {
+          display: block;
+          margin-bottom: 20px;
+      }
+  }
+
+  #servicios .services-1 {
+      text-align: center;
+      background-color: #070401e3;
+      padding: 15px 15px;
+      margin: 50px 50px 0;
+      border-radius: 25px;
+
+      @media (max-width: 767px) {
+          margin: 50px;
+      }
+  }
+
+  #servicios .services-1:hover {
+      background-color: rgb(169 68 0 / 89%);
+  }
+
+  #servicios .services-1 img {
+      width: 70px;
+      margin-bottom: 15px;
+  }
+
+  #servicios .services-1 h3 {
+      font-size: 50px;
+      color: #ff8521d5;
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 10px;
+  }
+
+  #servicios .services-1 a {
+      color: #c02929;
+      font-size: 16px;
+  }
+
+
+  /*--------------------------------------------------------------
+    # Contacto
+  --------------------------------------------------------------*/
+  #contacto {
+      background-color: #020202;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      background-image: url(../static/img/fondodeformu.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (min-width: 768px) {}
+  }
+
+  #contacto h2 {
+      margin-top: 50px;
+  }
+
+  #contacto hr {
+      border: 1px solid rgb(223, 85, 6);
+      width: 80px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+  }
+
+  #contacto p {
+      color: #ffffff;
+      margin: 40px;
+  }
+
+  #contacto .fondo {
+      text-align: center;
+      background-color: #070401e3;
+      padding: 15px 15px;
+      margin: 10px 10px 50px;
+      border-radius: 25px;
+      width: 90%;
+      display: flex;
+  }
+
+  #contacto .contact-form i {
+      font-size: 20px;
+      /* Cambia el tamaño de los iconos */
+      color: #f7f2ef;
+  }
+
+  #contacto .contact-form h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #fff;
+
+  }
+
+  #contacto .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+
+  }
+
+  #contacto .form-group i {
+      margin-right: 25px;
+      width: 15px;
+  }
+
+  #contacto .form-group input,
+  #contacto .form-group textarea {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #a8a4a0;
+      border-radius: 5px;
+  }
+
+  .campo {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #af9f92;
+      border-radius: 5px;
+  }
+
+
+
+  #contacto .contact-form {
+      text-align: center;
+      padding: 15px;
+      border-radius: 6px;
+      padding: 10px;
+      width: 700px;
+
+      @media (max-width: 767px) {
+          flex: 2;
+      }
+  }
+
+  #contacto .google-map {
+
+      width: 90%;
+  }
+
+  @media (max-width: 767px) {
+      #inicio {
+          margin-top: 0;
+      }
+
+      #nosotros .container,
+      #servicios .services-group,
+      #contacto .fondo {
+          width: 100%;
+          margin: 0;
+      }
+
+      #nosotros img {
+          max-width: 100%;
+      }
+
+      #servicios .services-group {
+          flex-direction: column;
+      }
+
+      #servicios .services-1 {
+          margin: 50px 0;
+      }
+
+      #contacto .fondo {
+          flex-direction: column;
+      }
+
+      #contacto .contact-form,
+      #contacto .google-map {
+          width: 100%;
+
+      }
+  }
+
+
+  /*--------------------------------------------------------------
+    # Footer
+  --------------------------------------------------------------*/
+  #footer {
+      background: black;
+      padding: 0 0 30px 0;
+      color: #fff;
+      font-size: 14px;
+  }
+
+  #footer .copyright {
+      text-align: center;
+      padding-top: 30px;
+  }
+
+  #footer .credits {
+      padding-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      color: #fff;
+  }
+
+  /*--------------------------------------------------------------
+    # Modales
+  --------------------------------------------------------------*/
+
+
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.8);
+
+      @media (max-width: 767px) {
+          height: 100vh;
+      }
+
+  }
+
+  .modal .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+  }
+
+  .modal form input,
+  .modal form textarea {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #a8a4a0;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      width: 100%;
+      align-items: center;
+      display: flex;
+  }
+
+  .modal form i {
+      margin-right: 25px;
+      width: 15px;
+  }
+
+  .modal h2 {
+      font-size: 50px;
+      color: #ff8521d5;
+      font-family: 'Bebas Neue', cursive;
+      text-align: center;
+  }
+
+  .modal hr {
+      border: 1px solid rgb(223, 85, 6);
+      width: 80px;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+  }
+
+  .modal p {
+      color: #ffffff;
+      margin: 40px;
+  }
+
+  /*define the modal-content background*/
+
+  .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto 15% auto;
+      border: 50px solid #ffffff;
+      width: 80%;
+  }
+
+  /*define the close button*/
+
+  .close {
+      position: absolute;
+      margin: 9% auto 14% auto;
+      right: 11%;
+      color: rgb(223, 85, 6);
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  /*define the close hover and focus effects*/
+
+  .close:hover,
+  .close:focus {
+      color: red;
+      cursor: pointer;
+  }
+
+  .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+
+  @media screen and (max-width: 600px) {
+
+      .cancelbtn,
+      .signupbtn {
+          width: 100%;
+      }
+  }

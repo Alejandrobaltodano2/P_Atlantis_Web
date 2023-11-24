@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>	
+        
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+        <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+     
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% block styles %}
+            
+        {% endblock styles %}
+            
+</head>
+<body>
+
+    {% block body %} 
+
+	{% endblock body %}
+    
+
+    <button id="open-chat" onclick="toggleChat()">Abrir Chat</button>
+    
+    <div id="chat-container">
+        <div id="chat-header">
+            Chat
+            <button onclick="toggleChat()">Cerrar</button>
+        </div>
+        
+        {% if  user.is_authenticated %}
+            <div id="chat-content">
+                
+                <div id="message-area">
+                    {%if pregunta and  respuesta%}
+                        <h1>{{pregunta}}</h1>
+                        <h1>{{respuesta}}</h1>
+                        
+                    {% else %}
+                        {% if Ver_pedidos %}
+                            <h1>{{Ver_pedidos.mensaje}}</h1>
+                            {% for pregunta,pedido in Ver_pedidos  %}
+                                <h1>{{pregunta}}</h1>
+                                <h1>{{pedido.pedido_usuario}}</h1>
+                                <h1>{{pedido.fecha_creacion}}</h1>
+
+                                <h1>{{pedido.plato_pedido.nombre_plato}}</h1>
+
+                            {% endfor %}
+                                
+                            {% else %}
+                                {% for pregunta,respuesta in  pregunta_respuesta %}
+                                    <h1>{{pregunta.pregunta}}</h1>
+                                    <h1>
+                                        <h1> respuesta</h1>
+                                        {% if respuesta.respuesta %}
+                                            {{respuesta.respuesta.respuesta}}        
+                                        
+                                            {% if respuesta.respuesta.imagen %}
+                                                <img src="{{respuesta.respuesta.imagen.url}}" alt="" style="width: 50%;height: 10%;">
+
+                                            {% endif %}
+                                    
+                                            
+                                        {% endif %}
+                                            
+                                    
+                                    </h1>
+                                {% endfor %}
+                        {% endif %}
+                    {% endif %}
+                        
+                    
+                </div>
+            </div>
+            <form    method="post">{% csrf_token %}
+                <input type="text"  name="chat-input" id="chat-input" placeholder="Escribe un mensaje..." onkeyup="sendMessage(event)">
+                <input type="submit" value="Enviar"  >
+    
+            </form> 
+        {% else %}
+        <div id="chat-content">
+                
+            <div id="message-area">
+                <p>iniciar sesion</p>
+
+            </div>
+        </div>
+
+        {% endif %}
+        
+   
+
+    
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{% static 'js/chat.js' %}"></script>
+</html>

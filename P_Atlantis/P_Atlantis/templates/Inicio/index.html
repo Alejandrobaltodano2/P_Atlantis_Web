@@ -1,0 +1,327 @@
+{% load static %}
+{% include 'base.html' %}
+
+{% block styles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATLANTIS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/68bdc9d77f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
+    <link rel="icon" href="{%static 'img/iconoo.ico'%}">
+{% endblock styles %}
+
+{% block body %} 
+    <header class="header">
+        <div class="container">
+            <img src="{% static 'img/logoo.png' %}" class="menu-icono" alt="">
+            <input type="checkbox" id="menu">
+            <label class="icon-menu" for="menu"></label>
+            <nav class="navbar">
+                <a href="#inicio" onclick="scrollToSection('inicio')">Inicio</a>
+                <a href="#nosotros" onclick="scrollToSection('nosotros')">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+<!-- ================================ -->
+
+    <!-- ======= Cuerpo de la Web ======= -->
+    <main>
+
+        <!-- ======= Inicio ======= -->
+        <section id="inicio">
+            <div class="container">
+                <h1> ATLANTIS</h1>
+                <span class="textoenmovimiento"> Restaurant & Grill </span>
+                <ul>
+                    <li>
+                        <p>¡Epecialistas en Parrillas y comida a la carta!
+                            Puedes consumir en el local, mesas al aire libre o terraza.</p>
+                    </li>
+                    <li>
+                        <br>
+                        <h3> Direccion</h3>
+                        <p class="icon-direction"> Av. Pablo Casals, Trujillo, Peru</p>
+                    </li>
+                    <li>
+                        <br>
+                        <h3> Celular</h3>
+                        <p class="icon-phone"> +51 948 661 842</p>
+                    </li>
+
+                    <li>
+                        <br>
+                        <h3> Horario</h3>
+                        <p class="icon-calendar"> 10:00AM A 12:00AM</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <!-- =========================== -->
+
+        <!-- ======= Bienvenidos ======= -->
+        <section id="bienvenido">
+            <div class="welcome-1"> </div>
+            <!-- en ese div esta el texto -->
+            <div class="welcome-2">
+                <h2> BIENVENIDOS A ATLANTIS</h2>
+                <p class="textoenmovimiento">
+                    Hola, te damos la bienvenida a la página principal
+                    de tu restaurante ATLANTIS.
+                    Acá podrás resolver algunas de tus dudas y saber más de nuestros servicios.
+                </p>
+            </div>
+        </section>
+        <!-- ======================== -->
+
+        <!-- ======= Nosotros ======= -->
+        <section id="nosotros">
+            <div class="services-txt">
+                <h2> Sobre nosotros</h2>
+                <hr>
+                <p class="textoenmovimiento">
+                    Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Obcaecati perferendis
+                    hic dicta aliquid fugiat culpa, error
+                    laudantium? Aperiam, praesentium cupiditate asperiores
+                    distinctio, tenetur commodi rem
+                    ex non saepe ducimus nesciunt?
+                </p>
+                <img src="{% static 'img/Logo.jpg' %}">
+            </div>
+
+        </section>
+        <!-- ======================== -->
+
+        <!-- ======= Servicios ======= -->
+        <section id="servicios">
+
+            <h2> Nuestros servicios culinarios</h2>
+            <hr>
+            <p class="textoenmovimiento">
+                Te presentamos algunas de nuestras especialidades de la casa ATLANTIS
+                donde podrás ver la carta y disfutar nuestros exquisitos platos
+            </p>
+            <div class="services-group">
+                <div class="services-1">
+                    <img src="{% static 'img/parri.jpg' %}">
+                    <h3>PARRILLAS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <!-- se crea un enlace -->
+                    <a href="#">Saber más</a>
+                </div>
+                <div class="services-1">
+                    <img src="{% static 'img/desay.jpg' %}">
+                    <h3>DESAYUNOS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <!-- se crea un enlace -->
+                    <a href="#">Saber más</a>
+
+                </div>
+                <div class="services-1">
+                    <img src="{% static 'almu.jpg' %}">
+                    <h3>ALMUERZOS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet.
+                    </p>
+                    <!-- se crea un enlace -->
+                    <a href="#">Saber más</a>
+                </div>
+            </div>
+            <a href="#" class="btn-1 textoenmovimiento"> Informacion </a>
+            <br>
+        </section>
+        <!-- ======================== -->
+
+        <!-- ======= Contacto ======= -->
+        <section id="contacto">
+            <div class="contact">
+                <h2>Conctáctanos</h2>
+                <hr>
+                <p class="textoenmovimiento">
+                    Si tienes alguna duda no olvides contactarte con nosotros.
+
+                </p>
+            </div>
+            <div class="fondo">
+                <div class="contact-form">
+                    <h2>CONTACTO</h2>
+                    <form action="images/procesar_formulario.php" method="POST">
+                        <div class="form-group">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre ">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="text" id="correo" name="correo" required placeholder="Escribe tu e-mail ">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-id-card"></i>
+                            <input type="text" id="dni" name="dni" required placeholder="Digite su numero de DNI">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" id="celular" name="celular" required
+                                placeholder="Digite su Numero de Celular">
+                        </div>
+                        <textarea class="campo" cols="30" rows="10" placeholder="Añade una descripción"></textarea>
+                        <div class="form-group">
+                            <button type="submit" class="btn-1">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="google-map">
+
+                    <a href="https://www.facebook.com/AtlantisRestaurantGrill?mibextid=ZbWKwL" target="_blank"
+                        class="icon-facebook" style="color: white; margin: 15px;">
+                        Síguenos en Facebook
+                    </a>
+                    <p class="icon-phone" style="margin: 15px;"> +51 948 661 842</p>
+                    <p class="icon-direction" style="margin: 15px;"> Av. Pablo Casals, Trujillo, Peru</p>
+                    <br>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d53144.91194884859!2d-79.04625344803581!3d-8.099522357913045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3dbdcdea4295%3A0xdbd0f394a74c53b6!2sAtlantis%20Comfort%20Inn!5e0!3m2!1ses-419!2spe!4v1699376940119!5m2!1ses-419!2spe"
+                        width="90%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+                    <a style="color: white;">TAMBIEN PUEDES:</a>
+
+                    <button class="btn-1" style="display: inline;"
+                        onclick="document.getElementById('id01').style.display='block'">Registrarte</button>
+                    <button class="btn-1" style="display: inline;"
+                        onclick="document.getElementById('id02').style.display='block'">Iniciar Sesión</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Restaurante Atlantis</span></strong>. Todos los derechos reservados
+                </div>
+                <div class="credits">
+                    Diseñado por <a href="index.html">Restaurante Atlantis</a>
+                </div>
+            </div>
+        </footer>
+        <!-- ======================= -->
+
+    </main>
+    <!-- ======================= -->
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+        <form action="guardar_cliente.php" method="POST" class="modal-content animate">
+
+            <h2>REGISTRARTE</h2>
+
+            <div class="form-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="dni" name="dni" required placeholder="Escribe tu dni ">
+            </div>
+
+
+            <div class="form-group">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" id="celularr" name="celular" required placeholder="Digite su Numero de Celular">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="password" id="pass1" name="pass" required placeholder="Digite su contraseña ">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="password" id="pass2" name="pass2" required placeholder="Repita su contraseña ">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-1">Aceptar</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+
+        <form action="images/procesar_formulario.php" method="POST" class="modal-content animate">
+            <h2>INICIAR SESION</h2>
+            <div class="form-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="usuario" name="usuario" required placeholder="Escribe tu usuario ">
+            </div>
+
+            <div class="form-group">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="password" id="pass" name="pass" required placeholder="Digite su contraseña ">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-1">Ingresar</button>
+            </div>
+        </form>
+
+    </div>
+
+
+<!-- ======= Scripts Locales ======= -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var textos = document.querySelectorAll('.textoenmovimiento');
+        var checkbox = document.getElementById('menu');
+
+        //animacion de texto
+        var observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // El texto se activará cuando al menos el 50% esté visible
+        };
+
+        var observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        textos.forEach(function (texto) {
+            observer.observe(texto);
+        });
+
+        //ocultar nav al clickear dentro de ella
+        var etiquetasA = document.querySelectorAll('nav.navbar a');
+        etiquetasA.forEach(function (etiqueta) {
+            etiqueta.addEventListener('click', function () {
+                checkbox.checked = false;
+            });
+        });
+    });
+</script>
+<script>
+    var modal = document.getElementById('id01');
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<!-- =============================== -->
+{% endblock body %}
